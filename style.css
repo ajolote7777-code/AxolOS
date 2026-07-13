@@ -1,0 +1,16 @@
+body {
+    background-color: aliceblue;
+    font-family: monospace;
+}
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}

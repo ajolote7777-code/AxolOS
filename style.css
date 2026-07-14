@@ -20,7 +20,7 @@ img {
     height: auto;
 }
 
-.cajaprincipal {
+#cajaprincipal {
     border: solid;
     width: 600px;
     border-radius: 9px;
@@ -35,7 +35,7 @@ img {
     display: flex;
     border: solid;
     border-radius: 9px;
-    background-color: aliceblue;
+    background-color: rgba(198, 240, 247, 0.8);
     justify-content: space-between;
     align-items: center;
     padding: 10px;

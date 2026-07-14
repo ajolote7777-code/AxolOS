@@ -20,7 +20,7 @@ img {
     height: auto;
 }
 
-div {
+.cajaprincipal {
     border: solid;
     width: 600px;
     border-radius: 9px;
@@ -30,4 +30,11 @@ div {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: aliceblue;
+}
+.topbar {
+    display: flex;
+}
+.clock {
+    font-size: 22px;
+    font-weight: bold;
 }

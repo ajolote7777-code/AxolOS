@@ -33,8 +33,14 @@ img {
 }
 .topbar {
     display: flex;
+    border: solid;
+    border-radius: 9px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
-.clock {
+#clock {
     font-size: 22px;
     font-weight: bold;
 }

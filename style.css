@@ -22,6 +22,7 @@ img {
 
 #cajaprincipal {
     border: solid;
+    position: absolute;
     width: 600px;
     border-radius: 9px;
     padding: 11px;
@@ -43,4 +44,9 @@ img {
 #clock {
     font-size: 22px;
     font-weight: bold;
+}
+#movecajaprincipal {
+    padding: 10px;
+    cursor: move;
+    background-color:rgba(198, 240, 247, 0.8);
 }

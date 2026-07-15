@@ -5,35 +5,49 @@ function update() {
 }
 update();
 setInterval(update, 1000);
-function DragElement(cajaprincipal){
 
-    var initialX = 0;
-    var initialY = 0;
-    var currentX = 0;
-    var currentY = 0;
+dragElement(document.getElementById("cajaprincipal"))
 
-    if(document.getElementById(cajaprincipal.id + "Header")){
-        document.getElementById(cajaprincipal.id + "Header").onmousedown = startDragging;
+function dragElement(elmnt){
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if(document.getElementById(elmnt.id + "movecajaprincipal"){
+
+        document.getElementById(elmnt.id + "movecajaprincipal").onmousedown = dragMouseDown;
+
+    } else {
+
+        elmnt.onmousedown = dragMouseDown;
 
     }
-    else {
-        cajaprincipal.onmousedown = startDragging;
+    function dragMouseDown(e) {
 
-    }
-    function startDragging(e){
-        e = e || window.Event;
+        elmnt.style.transform = "none";
+
+        e = e || window.event;
         e.preventDefault();
-        currentX = initialX - e.clientX;
-        currentY = initialY - e.clientY;
-        initialX = e.clientX
-        initialY = e.clientY
-        Element.style.top = (Element.offstetTop - currentY) + "px";
-        Element.style.left =(Element.offsetLeft - currentX) + "px";
+        pos3 = e.clientX;
+        pos4 = e.clientY;  
+        document.onmouseup = closeDragElement;
+        document.onmousemove= elementDrag;
 
     }
-    function stopDragging(){
+    function elementDrag(e) {
+
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX
+        pos4 = e.clientY
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+    }
+    function closeDragElement(){
+
         document.onmouseup = null;
-        document.onmousemove= null;
-    }
+        document.onmousemove = null;
 
     }
+}

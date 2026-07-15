@@ -11,7 +11,7 @@ dragElement(document.getElementById("cajaprincipal"))
 function dragElement(elmnt){
 
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if(document.getElementById(elmnt.id + "movecajaprincipal"){
+    if(document.getElementById(elmnt.id + "movecajaprincipal")){
 
         document.getElementById(elmnt.id + "movecajaprincipal").onmousedown = dragMouseDown;
 
@@ -51,3 +51,24 @@ function dragElement(elmnt){
 
     }
 }
+
+var welcomescreen = document.querySelector("#cajaprincipal")
+
+
+function closeWindow(cajaprincipal){
+
+    cajaprincipal.style.display = "none"
+
+}
+function openWindow(cajaprincipal){
+    cajaprincipal.style.display = "block"
+}
+var welcomeopen = document.querySelector("#welcomeopen")
+var welcomeclose = document.querySelector("#welcomeclose")
+welcomeclose.addEventListener("click", function(){
+    closeWindow(welcomescreen);
+
+});
+welcomeopen.addEventListener("click", function(){
+    openWindow(welcomescreen);
+});

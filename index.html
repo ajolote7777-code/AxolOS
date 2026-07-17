@@ -7,25 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cajaprincipal">
-        <div id = "movecajaprincipal">click here to move </div>
+    <div id="cajaprincipal" class="window">
+        <div id="movecajaprincipal">click here to move </div>
         <h1>Welcome to AxolOS!</h1>
         <h2>please wait for AxolOS to load. In the meantime, you can check these facts:</h2>
         <p>Hello world! My name is Angel and this is my very first Hack club project. It's a web based OS called AxolOS</p>
-        <img src="UnitedAirlines.jpg"
-             alt="Avion Comercial">
+        <img src="UnitedAirlines.jpg" alt="Avion Comercial">
         <p style="cursor: pointer" id="welcomeclose">Close</p>
     </div>
+
     <div class="topbar">
-        <h1>
-            AxolOS      Spain
-        </h1>
+        <h1>AxolOS Spain</h1>
         <p style="cursor: pointer" id="welcomeopen">About the OS</p>
         <div id="clock"></div>
-                
     </div>
-    <div id="calculadora">
-        <p>calculator</p>
+
+    <div id="calc-icono" class="icon" style="cursor: pointer;">
+        <img src="./baba.avif" alt="Calculadora" style="width: 48px; height: 48px;">
+        <p>Calculadora</p>
+    </div>
+
+    <div id="calc-ventana" class="window" style="display: none;">
+        <div id="movecalculadora" class="window-header">Calculadora <span id="calc-close" style="cursor:pointer; float:right;">[X]</span></div>
+        <div class="window-content">
+            <p>Contenido de la calculadora</p> 
+        </div>
     </div>
 
     <script src="script.js"></script>
